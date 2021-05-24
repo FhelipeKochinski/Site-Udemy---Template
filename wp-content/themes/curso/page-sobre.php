@@ -35,7 +35,7 @@
 							<?php endif; ?>
 
 						</div>
-						<?php get_sidebar( 'blog' ); ?>						
+												
 					</div>
 				</div>				
 			</section>

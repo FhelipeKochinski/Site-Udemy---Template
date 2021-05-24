@@ -2,7 +2,7 @@
     <div id="primary">
         <div id="main">
             <div class="container">
-                <h2>Search results for: </h2><?php echo get_search_query(); ?>
+                <h2><?php _e( 'Search results for:', 'wpcurso' ); ?> </h2><?php echo get_search_query(); ?>
             <?php
 
                 get_search_form();

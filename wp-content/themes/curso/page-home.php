@@ -3,11 +3,18 @@
 		<main>
 			<!-- Slide -->
 			<section class="slide">
-				<?php echo do_shortcode( '[recent_post_slider design="design-2" limit="5"]' ); ?>
+				<?php 
+
+				$design = get_theme_mod( 'set_slider_option' );
+				$limit = get_theme_mod( 'set_slider_limit' );
+
+				echo do_shortcode( '[recent_post_slider design="design-' . $design .' " limit=" ' . $limit .' "]' ); 
+
+				?>
 			</section>
 			<section class="services">
 				<div class="container">
-					<h1>Our Services</h1>
+					<h1><?php _e( 'Our Services', 'wpcurso' ); ?></h1>
 					<div class="row">
 						<div class="col-sm-4">
 							<div class="services-item">
@@ -49,7 +56,7 @@
 						<!-- Latest News Area -->
 						<div class="news col-md-8">
 							<div class="container">
-							<h1>Latest News</h1>
+							<h1><?php _e( 'Latest News', 'wpcurso' ); ?><h1>
 								<div class="row">
 								
 									<!-- Loop WP_Query -->
